@@ -43,3 +43,4 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'haml-rails'
 gem 'ruby-trello', github: 'jeremytregunna/ruby-trello'
+gem 'font-awesome-rails'
