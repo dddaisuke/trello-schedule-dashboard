@@ -42,3 +42,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'haml-rails'
+gem 'ruby-trello', github: 'jeremytregunna/ruby-trello'
