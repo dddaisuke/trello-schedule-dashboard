@@ -45,6 +45,9 @@ end
 gem 'haml-rails'
 gem 'ruby-trello', github: 'jeremytregunna/ruby-trello'
 gem 'font-awesome-rails'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 
 group :development do
   gem 'better_errors'
