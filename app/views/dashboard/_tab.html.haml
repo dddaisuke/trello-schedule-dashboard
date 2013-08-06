@@ -1,0 +1,4 @@
+%ul.nav.nav-tabs
+  - @lists.each do |list_id, list|
+    %li{ class: @selected_list_id == list_id ? 'active' : '' }
+      = link_to @list_name_by_id[list_id], dashboard_index_path(list_id: list_id)

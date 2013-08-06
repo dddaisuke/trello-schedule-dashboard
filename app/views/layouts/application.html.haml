@@ -6,4 +6,5 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body{ class: root_css_class_name }
-    = yield
+    .container
+      = yield
