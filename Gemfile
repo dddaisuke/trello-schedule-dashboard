@@ -37,9 +37,6 @@ end
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'haml-rails'
@@ -53,4 +50,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry'
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano-rbenv'
 end
