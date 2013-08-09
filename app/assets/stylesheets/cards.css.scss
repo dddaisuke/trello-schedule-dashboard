@@ -1,0 +1,11 @@
+.cards_controller {
+  &.show_action {
+    .card {
+      margin: 10px 0;
+    }
+
+    .link_to_trello {
+      margin-top: 10px;
+    }
+  }
+}

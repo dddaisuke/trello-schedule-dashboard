@@ -30,6 +30,7 @@ class DashboardController < ApplicationController
         list.cards
       end
       cards.each do |card|
+        Rails.cache.write("card_#{params[:id]}", card, expires_in: 1.day)
         card_data = card_data(card)
         card_member_ids = Rails.cache.fetch("trello_card_member_ids_#{card.id}", expires_in: 1.day) do
           card.member_ids
@@ -53,10 +54,10 @@ class DashboardController < ApplicationController
   private
 
   def card_data(card)
-    url = card.url
     data = card.name.split('@')
     name = data.first
     time = data.second if data.count > 1
+    time_as_integer = 1
     if time
       word = time.slice(time.size - 1, time.size)
       case word
@@ -69,6 +70,6 @@ class DashboardController < ApplicationController
       end
     end
 
-    { name: name, time: time_as_integer, url: url }
+    { name: name, time: time_as_integer, url: card.url, id: card.id }
   end
 end
