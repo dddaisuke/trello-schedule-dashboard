@@ -12,5 +12,5 @@
               = link_to truncate(card[:name], length: 30), card_path(card[:id]), id: "card_#{card[:id]}"
             :javascript
               $(document).ready(
-                $("#card_#{card[:id]}").colorbox({width: '300px', height: '300px', iframe:true, href: "http://localhost:3000/cards/#{card[:id]}"})
+                $("#card_#{card[:id]}").colorbox({width: '300px', height: '300px', iframe:true, href: "/cards/#{card[:id]}"})
               )
